@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import schollarHat from "../../assets/Images/envelop.png";
-import schollarKid from "../../assets/Images/envelop.png";
 
 const ContactMeHeader: React.FC = () => {
     return (

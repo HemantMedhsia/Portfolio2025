@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FaGithub, FaDribbble } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import hoverEffect from "hover-effect";
 import { useEffect, useRef } from "react";
 
