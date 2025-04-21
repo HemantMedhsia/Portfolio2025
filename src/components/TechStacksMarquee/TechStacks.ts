@@ -11,7 +11,7 @@ import gitImg from "../../assets/stack/Git.svg";
 import graphQLImg from "../../assets/stack/Graphql.svg";
 import nextJsImg from "../../assets/stack/icons8-nextjs-144.png";
 import reduxImg from "../../assets/stack/Redux.svg";
-import saasImg from "../../assets/stack/SaaS.svg";
+import saasImg from "../../assets/stack/Saas.svg";
 import materailUIImg from "../../assets/stack/MaterialUI.svg";
 import bootstrapImg from "../../assets/stack/Bootstrap.svg";
 import bashImg from "../../assets/stack/Bash.svg";
