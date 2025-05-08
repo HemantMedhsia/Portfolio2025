@@ -12,6 +12,8 @@ import routes from "./Routes/RoutesConfig";
 import MobileWorkInProgress from "./pages/MobileWorkInProgress";
 import LoadingPage from "./pages/Loader";
 
+import "./App.css";
+
 // Layout Wrapper
 const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <>
