@@ -9,7 +9,7 @@ import SmoothScroll from "./components/SmoothScrolling/SmoothScroll";
 import MusicToggle from "./components/Music/MusicToggle";
 
 import routes from "./Routes/RoutesConfig";
-import MobileWorkInProgress from "./pages/MobileWorkInProgress";
+// import MobileWorkInProgress from "./pages/MobileWorkInProgress";
 import LoadingPage from "./pages/Loader";
 
 import "./App.css";
@@ -29,7 +29,7 @@ const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => (
 );
 
 function App() {
-  const isMobile = window.innerWidth <= 768;
+  // const isMobile = window.innerWidth <= 768;
 
   return (
     <Router>

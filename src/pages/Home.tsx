@@ -25,15 +25,19 @@ const Home: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.5 }}
             >
-                <h1 className="lg:text-7xl mb-7 w-5xl text-left sm:text-5xl font-bold text-white">
-                    Hi, I'm Hemant —
-                </h1>
-                <h1 className="lg:text-7xl w-5xl text-left sm:text-5xl font-bold text-white">
-                    I build web <span className="text-7xl">experiences</span> that leave an <span className="text-9xl animated-gradient-text">impact.</span>
-                </h1>
-                <p className="mt-4 text-lg text-left text-gray-400">
-                    Explore my projects and skills.
-                </p>
+                <div className="px-4 sm:px-6 lg:px-60 md:pt-60">
+                    <h1 className="text-left font-bold text-white text-4xl sm:text-5xl lg:text-7xl md:mb-4">
+                        Hi, I'm Hemant —
+                    </h1>
+                    <h1 className="text-left font-bold text-white text-4xl sm:text-5xl lg:text-7xl">
+                        I build web <span className="text-blue-400">experiences</span> that leave an <br className="hidden sm:block" />
+                        <span className="text-7xl sm:text-7xl lg:text-9xl animated-gradient-text block sm:inline">impact.</span>
+                    </h1>
+                    <p className="mt-6 text-base sm:text-lg text-left text-gray-400">
+                        Explore my projects and skills.
+                    </p>
+                </div>
+
             </motion.div>
 
             {/* 👉 Right Hand Animated */}

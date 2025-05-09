@@ -16,12 +16,12 @@ const About: React.FC = () => {
                 <IntroHeading scrollYProgress={scrollYProgress} />
 
                 <motion.h2
-                    className="text-5xl w-full max-w-5xl text-left md:text-7xl font-bold mb-16 z-10 "
+                    className="text-5xl w-full max-w-5xl text-center md:text-left md:text-7xl font-bold mb-16 z-10 "
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
                 >
-                    Let me flex😁 <span className="text-[#7A5AF8] text-2xl animated-gradient-text">for a sec </span><span className="text-8xl animated-gradient-text">!</span>
+                    Let me flex😁 <span className="text-[#7A5AF8] text-2xl animated-gradient-text">for a sec </span><span className="md:text-8xl animated-gradient-text">!</span>
                 </motion.h2>
 
                 <motion.div

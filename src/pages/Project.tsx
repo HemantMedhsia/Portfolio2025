@@ -4,7 +4,7 @@ import projectData from "../Data/projectsData";
 
 const Project: React.FC = () => {
     return (
-        <>
+        <div className="px-4 md:px-0">
             <ProjectHeader />
             {projectData.map((project, index) => (
                 <ProjectCard
@@ -19,7 +19,7 @@ const Project: React.FC = () => {
                     liveLink={project.liveLink}
                 />
             ))}
-        </>
+        </div>
     );
 }
 

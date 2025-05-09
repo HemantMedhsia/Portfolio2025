@@ -15,12 +15,12 @@ const Github: React.FC = () => {
 
 
     return (
-        <section className="w-full px-4 py-10 md:py-16 bg-black text-white">
-            <div className="max-w-7xl mx-auto text-center">
+        <section className="w-full py-10 md:py-16 bg-black text-white">
+            <div className="md:max-w-7xl md:mx-auto text-center">
                 {/* Heading */}
-                <div className="flex flex-col items-start justify-start w-4xl">
+                <div className="flex px-4 flex-col items-start justify-start md:w-4xl">
                     <motion.h1
-                        className="mx-auto text-left md:text-5xl text-4xl font-extrabold leading-tight bg-gradient-to-r from-yellow-300 via-pink-300 to-purple-500 bg-clip-text text-transparent"
+                        className="w-full md:max-w-2xl md:mx-16 lg:mx-16 text-left md:text-5xl text-4xl font-extrabold leading-tight bg-gradient-to-r from-yellow-300 via-pink-300 to-purple-500 bg-clip-text text-transparent"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.3, duration: 1 }}
@@ -30,7 +30,7 @@ const Github: React.FC = () => {
 
                     {/* Description */}
                     <motion.p
-                        className="text-gray-400 text-left text-sm mt-6 max-w-2xl mx-auto leading-relaxed"
+                        className="text-gray-400 text-left text-sm mt-6 max-w-2xl mx-3 md:mx-auto leading-relaxed"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.6, duration: 1 }}
@@ -40,14 +40,14 @@ const Github: React.FC = () => {
                 </div>
 
                 <motion.div
-                    className="bg-[#15161C] backdrop-blur-md shadow-xl rounded-2xl p-4 sm:p-6 md:p-12 mt-12 
-               transition-transform hover:scale-[1.02] border-2 border-dashed border-[#2A2B37] 
-               overflow-x-auto w-full"
+                    className="bg-[#15161C] backdrop-blur-md shadow-xl md:rounded-2xl p-4 sm:p-6 md:p-12 mt-12
+             transition-transform hover:scale-[1.02] border-t-2 border-b-2 md:border-2 
+             border-dashed border-[#2A2B37] w-full"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.9, duration: 1 }}
                 >
-                    <div className="min-w-[350px] sm:min-w-full flex justify-center">
+                    <div className="w-full flex justify-center overflow-hidden">
                         <GitHubCalendar
                             username="HemantMedhsia"
                             blockSize={15}
@@ -55,10 +55,11 @@ const Github: React.FC = () => {
                             blockRadius={8}
                             fontSize={16}
                             theme={explicitTheme}
-                            style={{ color: "#99a1af" }}
+                            style={{ color: "#99a1af", minWidth: "300px" }}
                         />
                     </div>
                 </motion.div>
+
 
 
             </div>

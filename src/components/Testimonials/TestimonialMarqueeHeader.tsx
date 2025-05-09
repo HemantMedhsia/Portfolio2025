@@ -11,7 +11,7 @@ const TestimonialMarqueeHeader: React.FC = () => {
 
             {/* Main Intro */}
             <motion.h1
-                className="w-2xl mx-40 text-left text-4xl md:text-5xl font-extrabold leading-tight"
+                className="md:w-2xl md:mx-40 text-left text-4xl md:text-5xl font-extrabold leading-tight"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.3, duration: 1 }}
@@ -22,7 +22,7 @@ const TestimonialMarqueeHeader: React.FC = () => {
 
             {/* Short Story */}
             <motion.p
-                className="text-gray-400 text-sm mt-6 max-w-md mx-46 text-justify"
+                className="text-gray-400 text-sm mt-6 max-w-md md:mx-46 text-justify"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.6, duration: 1 }}
