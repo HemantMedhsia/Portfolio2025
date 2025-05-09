@@ -13,6 +13,7 @@ import MobileWorkInProgress from "./pages/MobileWorkInProgress";
 import LoadingPage from "./pages/Loader";
 
 import "./App.css";
+import MouseFollower from "./Ui/Loader/MouseFollower";
 
 // Layout Wrapper
 const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => (
@@ -33,9 +34,10 @@ function App() {
   return (
     <Router>
       <div className="app-container bg-black text-gray-300 text-4xl w-full min-h-screen h-full overflow-hidden relative">
-        {isMobile && <MobileWorkInProgress />}
+        <MouseFollower />
+        {/* {isMobile && <MobileWorkInProgress />} */}
         <MainLayout>
-          <Suspense fallback={<div><LoadingPage/></div>}>
+          <Suspense fallback={<div><LoadingPage /></div>}>
             <Routes>
               {routes.map((route, index) => (
                 <Route key={index} path={route.path} element={route.element} />
