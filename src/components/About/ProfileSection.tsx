@@ -36,7 +36,7 @@ const ProfileSection: React.FC = () => {
     return (
         <section className="flex flex-col items-center justify-center rounded-3xl md:px-4">
             <motion.div
-                className="flex flex-col lg:flex-row items-center gap-10 w-full max-w-6xl  border-2 border-dashed border-[#2A2B37] backdrop-blur-xl shadow-[0_20px_50px_rgba(122,90,248,0.2)] p-4 md:p-10 rounded-[2rem] transition-all duration-500 hover:shadow-[0_25px_60px_rgba(122,90,248,0.3)] overflow-hidden"
+                className="flex flex-col lg:flex-row items-center gap-10 w-full max-w-6xl  border-2 border-dashed border-[#2A2B37] backdrop-blur-xl shadow-[0_20px_50px_rgba(122,90,248,0.2)] py-6 px-4 md:p-10 rounded-[2rem] transition-all duration-500 hover:shadow-[0_25px_60px_rgba(122,90,248,0.3)] overflow-hidden"
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}

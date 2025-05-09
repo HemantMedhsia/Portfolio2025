@@ -17,7 +17,7 @@ const EducationList: React.FC = () => {
                         initial={{ opacity: 0, y: 50 }}
                         animate={inView ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 0.6, delay: index * 0.2 }}
-                        className="relative z-10 mb-80"
+                        className="relative z-10 mb-64 md:mb-[30rem]"
                     >
                         <EducationCard edu={edu} isLeft={isLeft} />
                     </motion.li>

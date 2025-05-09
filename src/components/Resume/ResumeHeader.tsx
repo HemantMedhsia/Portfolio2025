@@ -4,7 +4,7 @@ import girlWithBulb from "../../assets/Images/girlWithBulb.png"; // Adjust the p
 const ResumeHeader: React.FC = () => {
     return (
         <motion.header
-            className=" mt-40 w-full text-center py-16 px-6 bg-[#000]"
+            className=" mt-16 md:mt-40 w-full text-center py-16 px-6 bg-[#000]"
             initial={{ opacity: 0, y: -40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -13,7 +13,7 @@ const ResumeHeader: React.FC = () => {
             <motion.img
                 src={girlWithBulb} // Replace with your actual path
                 alt="Scholar Hat"
-                className="rotate-10 absolute top-1/5 right-20 w-16 h-16 md:w-80 md:h-80 opacity-70"
+                className="rotate-10 absolute top-5/17 md:top-1/5 right-20 w-40 h-40 md:w-80 md:h-80 opacity-70"
                 animate={{ y: [0, -15, 0] }}
                 transition={{
                     duration: 2,
@@ -24,7 +24,7 @@ const ResumeHeader: React.FC = () => {
 
             {/* Main Intro */}
             <motion.h1
-                className="w-2xl mx-40 text-left text-4xl md:text-5xl font-extrabold leading-tight "
+                className=" w-full md:w-2xl md:mx-40 text-left text-4xl md:text-5xl font-extrabold leading-tight "
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.3, duration: 1 }}
@@ -35,7 +35,7 @@ const ResumeHeader: React.FC = () => {
 
             {/* Short Story */}
             <motion.p
-                className="text-gray-400 text-sm mt-6 max-w-md mx-46 text-justify"
+                className="text-gray-400 text-sm mt-6 max-w-md md:mx-46 text-justify"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.6, duration: 1 }}

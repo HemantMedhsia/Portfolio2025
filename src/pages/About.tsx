@@ -12,7 +12,7 @@ const About: React.FC = () => {
 
     return (
         <section  className="bg-black text-white">
-            <div className="min-h-screen px-6 py-20 flex flex-col items-center justify-center relative overflow-hidden">
+            <div className="min-h-screen px-2 py-20 flex flex-col items-center justify-center relative overflow-hidden">
                 <IntroHeading scrollYProgress={scrollYProgress} />
 
                 <motion.h2
@@ -25,7 +25,7 @@ const About: React.FC = () => {
                 </motion.h2>
 
                 <motion.div
-                    className="flex flex-col lg:flex-row items-center max-w-6xl gap-16 z-10"
+                    className="flex flex-col items-center justify-center w-full max-w-6xl border-2 border-dashed border-[#2A2B37] backdrop-blur-xl shadow-[0_20px_50px_rgba(122,90,248,0.2)] p-2 md:p-6 rounded-[2rem] transition-all duration-500 hover:shadow-[0_25px_60px_rgba(122,90,248,0.3)] overflow-hidden"
                     initial={{ scale: 0.95, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
                     transition={{ duration: 0.8 }}

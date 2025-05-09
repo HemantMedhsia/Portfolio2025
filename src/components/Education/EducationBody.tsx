@@ -15,25 +15,25 @@ const EducationBody: React.FC = () => {
             <AnimatedImage
                 src={schollarKid} // Replace with your actual path
                 alt="Scholar Hat"
-                className="rotate-10 opacity-80 absolute top-1/3 left-20 w-16 h-16 md:w-1/5 md:h-1/6"
+                className="hidden md:block rotate-10 opacity-80 absolute top-5/14 -left-8 md:left-20 w-50 h-50 md:w-1/5 md:h-1/6"
             />
 
             <AnimatedImage
                 src={schollarKid2} // Replace with your actual path
                 alt="Scholar Hat"
-                className=" absolute opacity-80 top-80 right-20 w-16 h-16 md:w-1/5 md:h-1/6"
+                className="hidden md:block absolute opacity-80 top-1/6 md:top-80 -right-8 md:right-20 w-50 h-50 md:w-1/5 md:h-1/6"
             />
 
             <AnimatedImage
                 src={degree} // Replace with your actual path
                 alt="Scholar Hat"
-                className=" absolute opacity-80 top-5/9 right-20 w-16 h-16 md:w-1/4 md:h-auto"
+                className="hidden md:block absolute opacity-80 top-5/9 -right-4 md:right-20 w-44 h-44 md:w-1/4 md:h-auto"
             />
 
             <AnimatedImage
                 src={schollarBoy} // Replace with your actual path
                 alt="Scholar Hat"
-                className=" absolute opacity-80 top-5/7 left-20 w-16 h-16 md:w-1/4 md:h-auto"
+                className=" absolute md:opacity-80 top-5/7 left-20 w-50 h-50 md:w-1/4 md:h-auto"
             />
 
             <EducationList/>

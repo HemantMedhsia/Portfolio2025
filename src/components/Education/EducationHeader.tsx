@@ -12,7 +12,7 @@ const EducationHeader: React.FC = () => {
             <motion.img
                 src={schollarHat} // Replace with your actual path
                 alt="Scholar Hat"
-                className="rotate-10 absolute top-[30px] left-20 w-16 h-16 md:w-80 md:h-80"
+                className="rotate-10 absolute -top-22 left-1/3  md:top-[30px] md:left-20 w-40 h-40 md:w-80 md:h-80"
                 animate={{ y: [0, -15, 0] }}
                 transition={{
                     duration: 2,
@@ -23,7 +23,7 @@ const EducationHeader: React.FC = () => {
 
             {/* Main Education Heading */}
             <motion.h1
-                className="w-2xl mx-auto text-center md:text-5xl text-4xl font-extrabold leading-tight bg-gradient-to-r from-yellow-300 via-pink-300 to-purple-500 bg-clip-text text-transparent"
+                className="w-full md:w-2xl mx-auto text-center md:text-5xl text-4xl font-extrabold leading-tight bg-gradient-to-r from-yellow-300 via-pink-300 to-purple-500 bg-clip-text text-transparent"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.3, duration: 1 }}
@@ -62,7 +62,7 @@ const EducationHeader: React.FC = () => {
             </motion.div>
 
             {/* Social Emojis (optional or can be replaced later) */}
-            <div className="flex justify-end gap-4 text-xl md:text-sm text-gray-500 mt-4">
+            <div className="hidden md:flex justify-end gap-4 text-xl md:text-sm text-gray-500 mt-4">
                 <span className="hover:text-teal-400 cursor-pointer">👨‍🎓 GH</span>
                 <span className="hover:text-teal-400 cursor-pointer">📧 EM</span>
                 <span className="hover:text-teal-400 cursor-pointer">📘 FB</span>
