@@ -33,13 +33,7 @@ const About: React.FC = () => {
                     <ProfileSection />
                 </motion.div>
             </div>
-            {/* <motion.div
-                className="absolute bottom-6 left-1/2 -translate-x-1/2 text-gray-500 text-sm tracking-widest uppercase"
-                animate={{ y: [0, -5, 0] }}
-                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            >
-                scroll to explore ↧
-            </motion.div> */}
+            
         </section>
     );
 };

@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "motion/react"
 import leftHand from "../assets/Images/hand-left.webp"
 import rightHand from "../assets/Images/hand-right.webp"
+import ScrollHint from "../Ui/ScrollHint/ScrollHint";
 
 const Home: React.FC = () => {
     return (
@@ -33,10 +34,23 @@ const Home: React.FC = () => {
                         I build web <span className="text-blue-400">experiences</span> that leave an <br className="hidden sm:block" />
                         <span className="text-7xl sm:text-7xl lg:text-9xl animated-gradient-text block sm:inline">impact.</span>
                     </h1>
-                    <p className="mt-6 text-base sm:text-lg text-left text-gray-400">
-                        Explore my projects and skills.
+                    <p onClick={() => {
+                        const el = document.getElementById("projects");
+                        el?.scrollIntoView({ behavior: "smooth" });
+                    }} className="mt-6 text-base sm:text-lg text-left text-gray-400 cursor-pointer hover:text-blue-400">
+                        Scroll to see my projects and skills.
                     </p>
                 </div>
+
+                {/* <motion.div
+                    className="fixed bottom-6 left-1/2 -translate-x-1/2 text-gray-500 text-sm tracking-widest uppercase md:hidden"
+                    animate={{ y: [0, -5, 0] }}
+                    transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                >
+                    scroll to explore ↧
+                </motion.div> */}
+
+                <ScrollHint />
 
             </motion.div>
 
@@ -50,6 +64,8 @@ const Home: React.FC = () => {
                 transition={{ type: "spring", stiffness: 100, damping: 10, duration: 1 }}
                 whileHover={{ scale: 1.1, rotate: 10 }}
             />
+
+            {/* Gradient Circles */}
         </div>
     );
 };

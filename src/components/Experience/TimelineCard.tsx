@@ -15,81 +15,81 @@ interface TimelineCardProps {
     isLeft: boolean;
 }
 
-const TimelineCard: React.FC<TimelineCardProps> = ({
-    exp,
-    isLeft,
-}: {
-    exp: any;
-    isLeft: boolean;
-}) => {
+const TimelineCard: React.FC<TimelineCardProps> = ({ exp, isLeft }) => {
     return (
-        <div className="relative mb-24 flex justify-center w-full group rounded-3xl">
+        <div className="relative mb-24 flex flex-col md:flex-row justify-center w-full group rounded-3xl">
+
             {/* Neon dot */}
             <div
-                className={`absolute z-[-1] w-28 h-28 rounded-full bg-gradient-to-tr from-indigo-500 to-pink-500 border-4 border-white dark:border-gray-900 -top-10
-        ${isLeft ? "-right-2 md:right-[35rem]" : "-right-2 md:left-[35rem]"}
-    `}
+                className={`absolute z-[-1] w-20 h-20 md:w-28 md:h-28 rounded-full bg-gradient-to-tr from-indigo-500 to-pink-500 border-4 border-white dark:border-gray-900 -top-10
+                ${isLeft ? "left-1/2 md:right-[30%]" : "left-1/2 md:left-[30%]"} 
+                -translate-x-1/2 md:translate-x-0`}
             ></div>
 
-            {/* story para */}
-            <div>
-                <p className={` text-sm max-w-xs text-justify absolute text-gray-400 leading-relaxed mb-4 ${isLeft ? "left-20" : "right-20"} top-1/3 transform -translate-y-1/2`}>
-                    {exp.story}
-                </p>
-            </div>
-
-            {/* tech Stack */}
-            <div>
-                <div className={`absolute max-w-sm flex flex-wrap gap-2 items-center ${isLeft ? "right-40" : "left-40"} top-5/8 transform -translate-y-1/2`}>
-                    {exp.techStackImgs.map((img: any, index: any) => (
-                        <img
-                            key={index}
-                            src={img}
-                            alt="Tech Stack"
-                            className="h-12 p-1  border-[#7A5AF8] w-12 rounded-full ]"
-                        />
-                    ))}
-                </div>
-            </div>
             {/* Card container */}
             <motion.div
                 initial={{ opacity: 0, x: isLeft ? -60 : 60 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className={`
-          relative z-10 w-full md:w-5/18 rounded-3xl p-6 shadow-2xl
-          border-dashed border-2 border-[#2A2B37]  backdrop-blur-lg h-80 mb-20
-          ${isLeft ? "ml-0 md:mr-40 " : "mr-0 md:ml-40"}
-        `}
+                className={`relative z-10 w-full md:w-5/18 rounded-3xl px-6 py-4 shadow-2xl border-dashed border-2 border-[#2A2B37] backdrop-blur-lg
+                h-auto md:h-80 mb-12 md:mb-20 ${isLeft ? "md:mr-40" : "md:ml-40"}`}
             >
 
+                
+                {/* Logo (mobile above title, desktop bottom left) */}
+                <div className="mb-2 flex justify-center items-center md:absolute md:-top-16">
+                    <img
+                        src={exp.logo}
+                        alt={`${exp.company} logo`}
+                        className="md:h-20 md:w-20 h-16 w-16 rounded-full border-4 border-purple-700"
+                    />
+                </div>
+
+
                 {/* Title and Logo */}
-                <div className="text-xl font-extrabold animated-gradient-text bg-clip-text text-transparent mb-2">
-                    <div className="flex items-center justify-between">
-                        <div className="flex flex-col items-start justify-start">
-                            <span className=" flex justify-center items-center">{exp.company}</span>
-                            <div className="flex gap-1 items-center font-medium text-sm text-gray-400 mt-1 mb-1"><span><IoLocationSharp /></span>{exp.location}</div>
+                <div className="text-xl font-extrabold bg-clip-text text-transparent animated-gradient-text mb-4">
+                    <div className="flex flex-col items-center justify-between">
+                        <div className="flex flex-col">
+                            <span className="md:mt-4">{exp.company}</span>
+                            <div className="flex justify-center items-center gap-1 font-medium text-sm text-gray-400 mt-1 mb-2">
+                                <IoLocationSharp />
+                                {exp.location}
+                            </div>
                         </div>
-                        <time className="flex justify-center items-center text-xs text-gray-400 font-mono italic mb-1 opacity-80">
+                        <time className="text-xs text-gray-400 font-mono italic opacity-80">
                             {exp.year}
                         </time>
                     </div>
                 </div>
 
-                <div className="absolute  bottom-74 border-2 rounded-full"><img
-                    src={exp.logo}
-                    alt={`${exp.company} logo`}
-                    className="h-24 w-24 ml-3 rounded-full border-2"
-                /></div>
 
-                <div className="text-md font-semibold text-gray-300 mb-1">
+                <div className="text-2xl md:text-3xl font-semibold text-gray-300 mb-1">
                     {exp.title}
                 </div>
 
-                <p className="text-sm text-gray-300 leading-relaxed">
+                <p className="text-lg md:text-sm text-gray-300 leading-relaxed mb-2">
                     {exp.description}
                 </p>
             </motion.div>
+
+            {/* Story paragraph */}
+            <div className={`backdrop-blur-md mt-4 md:mt-0 md:absolute max-w-xs text-lg md:text-sm text-gray-400 text-justify leading-relaxed
+                ${isLeft ? "md:left-20" : "md:right-20"} top-1/3 transform md:-translate-y-1/2 px-4 md:px-0 mb-4`}>
+                {exp.story}
+            </div>
+
+            {/* Tech Stack */}
+            <div className={`mt-6 md:absolute flex flex-wrap gap-2 items-center justify-center md:justify-start md:w-sm
+                ${isLeft ? "md:right-40" : "md:left-40"} top-5/8 transform md:-translate-y-1/2`}>
+                {exp.techStackImgs.map((img, index) => (
+                    <img
+                        key={index}
+                        src={img}
+                        alt="Tech"
+                        className="h-10 w-10 md:h-12 md:w-12 p-1 border-[#7A5AF8] rounded-full"
+                    />
+                ))}
+            </div>
         </div>
     );
 };

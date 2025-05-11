@@ -1,14 +1,23 @@
 import React, { createContext, useContext, useEffect, useRef, useState } from "react";
 import music from "../assets/Sounds/epic.mp3";
+import { useLocation } from "react-router-dom";
 
 const MusicContext = createContext<any>(null);
 
 export const MusicProvider = ({ children }: { children: React.ReactNode }) => {
     const audioRef = useRef<HTMLAudioElement>(new Audio(music));
-    const [isPlaying, setIsPlaying] = useState(true); // ✅ Default ON
-    const [isInitialized, setIsInitialized] = useState(false); // One-time init check
+    const [isPlaying, setIsPlaying] = useState(true);
+    const [isInitialized, setIsInitialized] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
+    const toggleMenu = () => setIsOpen(prev => !prev);
+    const closeMenu = () => setIsOpen(false);
 
-    // Try autoplay on mount
+    const location = useLocation();
+
+    useEffect(() => {
+        closeMenu();
+    }, [location.pathname]);
+
     useEffect(() => {
         const audio = audioRef.current;
         audio.loop = true;
@@ -55,7 +64,7 @@ export const MusicProvider = ({ children }: { children: React.ReactNode }) => {
     };
 
     return (
-        <MusicContext.Provider value={{ toggleMusic, isPlaying }}>
+        <MusicContext.Provider value={{ toggleMusic, isPlaying, isOpen, toggleMenu, closeMenu }}>
             {children}
         </MusicContext.Provider>
     );

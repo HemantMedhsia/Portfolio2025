@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {Routes, Route } from "react-router-dom";
 import { Suspense } from "react";
 
 // Global Layout Components
@@ -14,11 +14,13 @@ import LoadingPage from "./pages/Loader";
 
 import "./App.css";
 import MouseFollower from "./Ui/Loader/MouseFollower";
+import SlidingMenu from "./pages/SlidingMenu";
 
 // Layout Wrapper
 const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <>
     <MusicToggle />
+    <SlidingMenu />
     <Header />
     <ScrollToTop />
     <SmoothScroll>
@@ -32,7 +34,7 @@ function App() {
   // const isMobile = window.innerWidth <= 768;
 
   return (
-    <Router>
+    <>
       <div className="app-container bg-black text-gray-300 text-4xl w-full min-h-screen h-full overflow-hidden relative">
         <MouseFollower />
         {/* {isMobile && <MobileWorkInProgress />} */}
@@ -46,7 +48,7 @@ function App() {
           </Suspense>
         </MainLayout>
       </div>
-    </Router>
+    </>
   );
 }
 

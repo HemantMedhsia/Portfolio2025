@@ -27,18 +27,18 @@ const Loader: React.FC = () => {
     return (
         <div className="flex justify-center items-center z-[99999] text-3xl font-medium font-poppins text-white bg-black p-10 rounded-xl mx-auto h-screen w-full">
             <div className="flex items-center gap-4 relative h-[50px] overflow-hidden">
-                <p className="footer-gradient-border animated-gradient-text font-thin text-lg">Loading...</p>
+                <p className="hidden md:block footer-gradient-border animated-gradient-text font-thin text-lg">Loading...</p>
 
-                <div className="relative h-[50px] w-[270px] overflow-hidden text-right">
+                <div className="relative h-[50px] w-[270px] overflow-hidden text-justify items-center">
                     <motion.div
-                        className="flex flex-col"
+                        className="flex flex-col w-full"
                         animate={{ y: -currentIndex * WORD_HEIGHT }}
                         transition={{ duration: 0.5, ease: "easeInOut" }}
                     >
                         {words.map((word, index) => (
                             <div
                                 key={index}
-                                className="h-[50px] flex items-center pl-2 text-4xl animated-gradient-text"
+                                className="h-[50px] flex items-center justify-center text-justify pl-2 text-4xl animated-gradient-text"
                             >
                                 {word}
                             </div>
