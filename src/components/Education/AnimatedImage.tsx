@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import LazyMotionImage from "../LazyImage/LazyMotionImage";
 
 interface AnimatedImageProps {
     src: string;
@@ -8,11 +9,11 @@ interface AnimatedImageProps {
 
 const AnimatedImage: React.FC<AnimatedImageProps> = ({ src, alt, className }) => {
     return (
-        <motion.img
+        <LazyMotionImage
             src={src}
             alt={alt}
             className={className}
-            animate={{ y: [0, -15, 0] }}
+            animation={{ y: [0, -15, 0] }}
             transition={{
                 duration: 2,
                 repeat: Infinity,

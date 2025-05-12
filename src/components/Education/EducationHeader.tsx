@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
 import schollarHat from "../../assets/Images/Education/schollarHat.png";
+import LazyImage from '../LazyImage/LazyImage';
+import LazyMotionImage from '../LazyImage/LazyMotionImage';
 
 const EducationHeader: React.FC = () => {
     return (
@@ -9,7 +11,7 @@ const EducationHeader: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
         >
-            <motion.img
+            {/* <motion.img
                 src={schollarHat} // Replace with your actual path
                 alt="Scholar Hat"
                 className="rotate-10 absolute -top-22 left-1/3  md:top-[30px] md:left-20 w-40 h-40 md:w-80 md:h-80"
@@ -19,7 +21,13 @@ const EducationHeader: React.FC = () => {
                     repeat: Infinity,
                     ease: "easeInOut"
                 }}
-            />
+            /> */}
+
+            <LazyMotionImage animation={{ y: [0, -15, 0] }} transition={{
+                duration: 2,
+                repeat: Infinity,
+                ease: "easeInOut"
+            }} src={schollarHat} alt='Scholar Hat' className='rotate-10 absolute -top-22 left-1/3  md:top-[30px] md:left-20 w-40 h-40 md:w-80 md:h-80' />
 
             {/* Main Education Heading */}
             <motion.h1
