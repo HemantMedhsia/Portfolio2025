@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { IoLocationSharp } from "react-icons/io5";
+import LazyImage from "../LazyImage/LazyImage";
 
 interface TimelineCardProps {
     exp: {
@@ -38,11 +39,12 @@ const TimelineCard: React.FC<TimelineCardProps> = ({ exp, isLeft }) => {
                 
                 {/* Logo (mobile above title, desktop bottom left) */}
                 <div className="mb-2 flex justify-center items-center md:absolute md:-top-16">
-                    <img
+                    <LazyImage src={exp.logo} alt={exp.company} className={"md:h-20 md:w-20 h-16 w-16 rounded-full border-4 border-purple-700"} />
+                    {/* <img
                         src={exp.logo}
                         alt={`${exp.company} logo`}
                         className="md:h-20 md:w-20 h-16 w-16 rounded-full border-4 border-purple-700"
-                    />
+                    /> */}
                 </div>
 
 
@@ -82,12 +84,13 @@ const TimelineCard: React.FC<TimelineCardProps> = ({ exp, isLeft }) => {
             <div className={`mt-6 md:absolute flex flex-wrap gap-2 items-center justify-center md:justify-start md:w-sm
                 ${isLeft ? "md:right-40" : "md:left-40"} top-5/8 transform md:-translate-y-1/2`}>
                 {exp.techStackImgs.map((img, index) => (
-                    <img
-                        key={index}
-                        src={img}
-                        alt="Tech"
-                        className="h-10 w-10 md:h-12 md:w-12 p-1 border-[#7A5AF8] rounded-full"
-                    />
+                    <LazyImage src={img} alt={"Tech"} key={index} className="h-10 w-10 md:h-12 md:w-12 p-1 border-[#7A5AF8] rounded-full" />
+                    // <img
+                    //     key={index}
+                    //     src={img}
+                    //     alt="Tech"
+                    //     className="h-10 w-10 md:h-12 md:w-12 p-1 border-[#7A5AF8] rounded-full"
+                    // />
                 ))}
             </div>
         </div>

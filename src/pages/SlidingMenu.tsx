@@ -19,7 +19,7 @@ const menuVariants = {
         x: '100%',
         transition: {
             type: 'tween',
-            duration: 0.3,
+            duration: 0.1,
             when: 'afterChildren',
             staggerChildren: 0.08,
             staggerDirection: -1,
@@ -30,7 +30,7 @@ const menuVariants = {
 const itemVariants = {
     hidden: { opacity: 0, x: 30 },
     visible: { opacity: 1, x: 0, transition: { duration: 0.3 } },
-    exit: { opacity: 0, x: 30, transition: { duration: 0.2 } },
+    exit: { opacity: 0, x: 30, transition: { duration: 0.1 } },
 };
 
 const SlidingMenu = () => {
