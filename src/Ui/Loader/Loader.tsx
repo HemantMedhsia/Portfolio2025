@@ -20,15 +20,14 @@ const Loader: React.FC = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % words.length);
-        }, 2000); // every 2 seconds
+        }, 1300); // every 2 seconds
         return () => clearInterval(interval);
     }, []);
 
     return (
         <div className="flex justify-center items-center z-[99999] text-3xl font-medium font-poppins text-white bg-black p-10 rounded-xl mx-auto h-screen w-full">
-            <div className="flex items-center gap-4 relative h-[50px] overflow-hidden">
-                <p className="hidden md:block footer-gradient-border animated-gradient-text font-thin text-lg">Loading...</p>
-
+            <div className="flex flex-col items-center gap-4 relative h-[150px] overflow-hidden">
+                <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
                 <div className="relative h-[50px] w-[270px] overflow-hidden text-justify items-center">
                     <motion.div
                         className="flex flex-col w-full"

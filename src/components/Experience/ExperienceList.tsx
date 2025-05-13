@@ -1,12 +1,17 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { experiences } from "./data";
+import { experiences, reverseExperienceData } from "./data";
 import TimelineCard from "./TimelineCard";
 
-const ExperienceList: React.FC = () => {
+interface ExperienceListProps {
+    isReversed?: boolean;
+}
+
+const ExperienceList: React.FC<ExperienceListProps> = ({isReversed}) => {
+    const data = isReversed ? reverseExperienceData : experiences ;
     return (
         <>
-            {experiences.map((exp, index) => {
+            {data.map((exp, index) => {
                 const isLeft = index % 2 === 0;
 
                 const { ref, inView } = useInView({

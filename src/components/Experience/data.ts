@@ -25,16 +25,16 @@ import angularImg from "../../assets/stack/icons8-angular-144.png";
 
 const experiences = [
     {
-        year: "Feb 2025 - Present",
-        title: "Associate Software Developer Intern",
-        company: "Cognis Solutions Pvt. Ltd.",
+        year: "June 2024 - July 2024",
+        title: "Full Stack Developer Intern",
+        company: "Growquest Consultancy",
         location: "Bangalore, India",
-        logo: cognisLogo,
+        logo: growquestLogo,
         description:
-            "Switched to Java and contributed to a smart CMS for shipping & vessel management. Worked on EDI validation and microservice architecture using Spring Boot and Angular.",
+            "Built dynamic SaaS dashboards, implemented secure logins, and integrated OCR-based document reading in vendor tax-related applications.",
         story:
-            "After working deeply with MERN, I decided to expand my horizon and joined Cognis Solutions Pvt. Ltd. in Bangalore 🌇, where I switched to Java 🚀. I worked on a smart CMS for managing shipping & vessel data, plus tackled EDI validation systems. I also explored microservices with Spring Boot and learned how enterprise apps scale and communicate ⚙️. It was my gateway to backend mastery 👨‍💻💡.",
-        techStackImgs: [javaImg, springImg, sprintBootImg, reactImg, angularImg, nodeImg, jsImg, tailwindImg, htmlImg, cssImg, gitImg, githubImg, graphQLImg, reduxImg, saasImg, bootstrapImg, bashImg],
+            "This is where the fire lit up 🔥 — my internship at Growquest kickstarted it all. I built SaaS dashboards, implemented secure login systems, and integrated OCR logic to extract data from scanned vendor tax docs 📄🔍. The thrill of turning raw ideas into beautiful UI was next-level. From debugging late at night to deploying working apps — this was my foundation 🧱⚙️.",
+        techStackImgs: [reactImg, nodeImg, expressImg, mongoImg, jsImg, tailwindImg, htmlImg, cssImg, gitImg, githubImg, nextJsImg, reduxImg, saasImg, materailUIImg, bootstrapImg, bashImg],
     },
     {
         year: "Aug 2024 - Dec 2024",
@@ -49,17 +49,32 @@ const experiences = [
         techStackImgs: [reactImg, nodeImg, expressImg, mongoImg, jsImg, tailwindImg, htmlImg, cssImg, gitImg, githubImg, graphQLImg, reduxImg, saasImg, materailUIImg, bootstrapImg, bashImg],
     },
     {
-        year: "June 2024 - July 2024",
-        title: "Full Stack Developer Intern",
-        company: "Growquest Consultancy",
+        year: "Feb 2025 - Present",
+        title: "Associate Software Developer Intern",
+        company: "Cognis Solutions Pvt. Ltd.",
         location: "Bangalore, India",
-        logo: growquestLogo,
+        logo: cognisLogo,
         description:
-            "Built dynamic SaaS dashboards, implemented secure logins, and integrated OCR-based document reading in vendor tax-related applications.",
+            "Switched to Java and contributed to a smart CMS for shipping & vessel management. Worked on EDI validation and microservice architecture using Spring Boot and Angular.",
         story:
-            "This is where the fire lit up 🔥 — my internship at Growquest kickstarted it all. I built SaaS dashboards, implemented secure login systems, and integrated OCR logic to extract data from scanned vendor tax docs 📄🔍. The thrill of turning raw ideas into beautiful UI was next-level. From debugging late at night to deploying working apps — this was my foundation 🧱⚙️.",
-        techStackImgs: [reactImg, nodeImg, expressImg, mongoImg, jsImg, tailwindImg, htmlImg, cssImg, gitImg, githubImg, nextJsImg, reduxImg, saasImg, materailUIImg, bootstrapImg, bashImg],
+            "After working deeply with MERN, I decided to expand my horizon and joined Cognis Solutions Pvt. Ltd. in Bangalore 🌇, where I switched to Java 🚀. I worked on a smart CMS for managing shipping & vessel data, plus tackled EDI validation systems. I also explored microservices with Spring Boot and learned how enterprise apps scale and communicate ⚙️. It was my gateway to backend mastery 👨‍💻💡.",
+        techStackImgs: [javaImg, springImg, sprintBootImg, reactImg, angularImg, nodeImg, jsImg, tailwindImg, htmlImg, cssImg, gitImg, githubImg, graphQLImg, reduxImg, saasImg, bootstrapImg, bashImg],
     },
 ];
 
-export { experiences };
+const reverseExperienceData = [
+    {
+        ...experiences[2],
+        story: "Today, I’m deep into Java and enterprise-scale backend work at Cognis Solutions 🚢. But just a few months ago, I was immersed in the MERN stack jungle 🌴. It’s incredible how fast the transition was — from building full-stack apps in JavaScript to crafting microservices in Spring Boot ☕. At Cognis, I’m learning the rigor of scalable systems and the elegance of strong typing. Backend mastery in progress! ⚙️📈",
+    },
+    {
+        ...experiences[1],
+        story: "Before diving into the world of Java, I was wielding the full power of the MERN stack at Aradhya Technologies ⚒️. I crafted CRMs for schools and employees and polished responsive designs. This phase helped me solidify my full-stack skills and taught me how to build production-ready dashboards with JS firepower 🔥. It laid a solid ground before stepping into more structured enterprise systems.",
+    },
+    {
+        ...experiences[0],
+        story: "And it all began here — at Growquest Consultancy 🧠. My first taste of full-stack development came in the form of SaaS dashboards and OCR integrations 🧾. I still remember the thrill of deploying my first secure login system. Debugging those early bugs, pushing commits at midnight 🌙 — this was the spark that set everything in motion. From here, my tech journey truly started 🔧🚀.",
+    },
+];
+
+export { experiences, reverseExperienceData };

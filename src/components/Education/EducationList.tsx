@@ -1,12 +1,17 @@
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import EducationCard from "./EducationCard";
-import { educationData } from "./data";
+import { educationData, reverseEducationData } from "./data";
 
-const EducationList: React.FC = () => {
+interface EducationListProps {
+    isReversed?: boolean;
+}
+
+const EducationList: React.FC<EducationListProps> = ( {isReversed}) => {
+    const data = isReversed ? reverseEducationData : educationData;
     return (
         <>
-            {educationData.map((edu, index) => {
+            {data.map((edu, index) => {
                 const isLeft = index % 2 === 0;
                 const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
 

@@ -1,4 +1,4 @@
-import { lazy } from "react";
+import { lazy, Suspense } from "react";
 import LoadingPage from "../pages/Loader";
 
 // Lazy Load Pages
@@ -20,11 +20,18 @@ const TestimonialMarquee = lazy(() => import("../components/Marquee/TestimonialM
 const ResumeHeader = lazy(() => import("../components/Resume/ResumeHeader"));
 const ContactMeHeader = lazy(() => import("../components/Contactme/ContactmeHeader"));
 
+// Helper for Suspense-wrapped route elements
+const withLoader = (component: React.ReactNode) => (
+    <Suspense fallback={<LoadingPage />}>
+        {component}
+    </Suspense>
+);
+
 // Route Configurations
 const routes = [
     {
         path: "/",
-        element: (
+        element: withLoader(
             <>
                 <Home />
                 <About />
@@ -37,20 +44,20 @@ const routes = [
             </>
         ),
     },
-    { path: "/experience", element: <Experience /> },
+    { path: "/experience", element: withLoader(<Experience />) },
     {
         path: "/resume",
-        element: (
+        element: withLoader(
             <>
                 <ResumeHeader />
                 <Resume />
             </>
         ),
     },
-    { path: "/education", element: <Education /> },
+    { path: "/education", element: withLoader(<Education />) },
     {
         path: "/contactme",
-        element: (
+        element: withLoader(
             <>
                 <ContactMeHeader />
                 <Contactme />
@@ -58,7 +65,7 @@ const routes = [
         ),
     },
     { path: "/l", element: <LoadingPage /> },
-    { path: "*", element: <Error404 /> },
+    { path: "*", element: withLoader(<Error404 />) },
 ];
 
 export default routes;
