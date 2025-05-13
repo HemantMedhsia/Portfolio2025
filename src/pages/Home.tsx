@@ -1,10 +1,21 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { motion } from "motion/react"
 import leftHand from "../assets/Images/hand-left.webp"
 import rightHand from "../assets/Images/hand-right.webp"
 import ScrollHint from "../Ui/ScrollHint/ScrollHint";
 
 const Home: React.FC = () => {
+
+    useEffect(() => {
+        const loadPages = async () => {
+            await Promise.all([
+                import("../pages/Experience"),
+                import("../pages/Education")
+            ]);
+        };
+        loadPages();
+    }, []);
+
     return (
         <div className="relative  w-full h-screen flex items-center justify-center overflow-hidden">
 

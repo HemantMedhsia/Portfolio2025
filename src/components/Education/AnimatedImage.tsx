@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import LazyMotionImage from "../LazyImage/LazyMotionImage";
 
 interface AnimatedImageProps {

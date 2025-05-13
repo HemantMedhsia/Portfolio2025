@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import schollarHat from "../../assets/Images/Education/schollarHat.png";
-import LazyImage from '../LazyImage/LazyImage';
 import LazyMotionImage from '../LazyImage/LazyMotionImage';
 
 const EducationHeader: React.FC = () => {

@@ -25,7 +25,7 @@ import angularImg from "../../assets/stack/icons8-angular-144.png";
 
 const experiences = [
     {
-        year: "2025",
+        year: "Feb 2025 - Present",
         title: "Associate Software Developer Intern",
         company: "Cognis Solutions Pvt. Ltd.",
         location: "Bangalore, India",
@@ -37,8 +37,8 @@ const experiences = [
         techStackImgs: [javaImg, springImg, sprintBootImg, reactImg, angularImg, nodeImg, jsImg, tailwindImg, htmlImg, cssImg, gitImg, githubImg, graphQLImg, reduxImg, saasImg, bootstrapImg, bashImg],
     },
     {
-        year: "2024",
-        title: "Associate Software Developer Intern",
+        year: "Aug 2024 - Dec 2024",
+        title: "Full Stack Developer",
         company: "Aradhya Technologies and Skill Development Pvt. Ltd.",
         location: "Varanasi, India",
         logo: aradhyaLogo,
@@ -49,7 +49,7 @@ const experiences = [
         techStackImgs: [reactImg, nodeImg, expressImg, mongoImg, jsImg, tailwindImg, htmlImg, cssImg, gitImg, githubImg, graphQLImg, reduxImg, saasImg, materailUIImg, bootstrapImg, bashImg],
     },
     {
-        year: "June 2024 - August 2024",
+        year: "June 2024 - July 2024",
         title: "Full Stack Developer Intern",
         company: "Growquest Consultancy",
         location: "Bangalore, India",
