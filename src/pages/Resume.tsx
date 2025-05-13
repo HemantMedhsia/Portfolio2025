@@ -62,7 +62,7 @@ export default function Resume() {
                 transition={{ delay: 1.3, duration: 1 }}
                 onClick={handleDownloadResume}
             >
-                <button className="bg-white/10 backdrop-blur-md border border-indigo-400 text-indigo-200 font-medium px-5 py-2 rounded-xl rounded-br-xl shadow-lg hover:bg-indigo-200/60 hover:text-black transition-all duration-300 tracking-widest cursor-pointer text-sm">
+                <button className="bg-white/10 backdrop-blur-md border border-indigo-400 text-indigo-200 font-medium px-5 py-2 rounded-xl rounded-br-xl shadow-lg hover:bg-indigo-200/60 hover:text-black transition-all duration-300 tracking-widest cursor-pointer text-sm active:bg-indigo-200/60 active:text-black">
                     DOWNLOAD RESUME ↓
                 </button>
             </motion.div>

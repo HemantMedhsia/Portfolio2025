@@ -67,7 +67,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ techStack, projectName, mainI
                     <a
                         href={liveLink}
                         target="_blank"
-                        className="text-teal-300 uppercase text-sm tracking-widest border-b-2 border-teal-300 pb-1 hover:opacity-80 transition"
+                        className="text-teal-300 active:text-teal-100 active:border-teal-100 uppercase text-sm tracking-widest border-b-2 border-teal-300 pb-1 hover:opacity-80 transition"
                     >
                         Visit the Website
                     </a>
@@ -76,7 +76,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ techStack, projectName, mainI
                     <a
                         href={githubLink}
                         target="_blank"
-                        className="text-teal-300 uppercase text-sm tracking-widest border-b-2 border-teal-300 pb-1 hover:opacity-80 transition"
+                        className="text-teal-300 active:text-teal-100 active:border-teal-100 uppercase text-sm tracking-widest border-b-2 border-teal-300 pb-1 hover:opacity-80 transition"
                     >
                         Github URL
                     </a>

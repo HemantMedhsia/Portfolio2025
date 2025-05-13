@@ -20,7 +20,6 @@ const TestimonialMarquee = lazy(() => import("../components/Marquee/TestimonialM
 const ResumeHeader = lazy(() => import("../components/Resume/ResumeHeader"));
 const ContactMeHeader = lazy(() => import("../components/Contactme/ContactmeHeader"));
 
-// Helper for Suspense-wrapped route elements
 const withLoader = (component: React.ReactNode) => (
     <Suspense fallback={<LoadingPage />}>
         {component}

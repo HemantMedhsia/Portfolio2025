@@ -21,7 +21,7 @@ const SocialIcons: React.FC = () => {
                 <a href="https://github.com/hemantmedhsia" target="_blank" rel="noopener noreferrer" className="hover:text-teal-300 cursor-pointer hidden md:block"><ImGithub size={24} /></a>
                 <a href="https://www.linkedin.com/in/hemantmedhsia/" target="_blank" rel="noopener noreferrer" className="hover:text-teal-300 cursor-pointer hidden md:block"><ImLinkedin2 size={24} /></a>
                 <a href="https://www.instagram.com/hemant_____g/" target="_blank" rel="noopener noreferrer" className="hover:text-teal-300 cursor-pointer hidden md:block"><IoLogoInstagram size={24} /></a>
-                <div onClick={toggleMenu} className="hover:text-teal-300 block md:hidden "><CiMenuFries size={28} /></div>
+                <div onClick={toggleMenu} className="active:bg-grey-300 active:text-black block md:hidden "><CiMenuFries size={28} /></div>
             </div>
         </>
     )
