@@ -13,7 +13,7 @@ import routes from "./Routes/RoutesConfig";
 import LoadingPage from "./pages/Loader";
 
 import "./App.css";
-import MouseFollower from "./Ui/Loader/MouseFollower";
+import MouseFollower from "./Ui/MouseFollower/MouseFollower";
 import SlidingMenu from "./pages/SlidingMenu";
 
 // Layout Wrapper
