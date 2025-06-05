@@ -1,4 +1,4 @@
-import {Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { Suspense } from "react";
 
 // Global Layout Components
@@ -9,16 +9,15 @@ import SmoothScroll from "./components/SmoothScrolling/SmoothScroll";
 import MusicToggle from "./components/Music/MusicToggle";
 
 import routes from "./Routes/RoutesConfig";
-// import MobileWorkInProgress from "./pages/MobileWorkInProgress";
 import LoadingPage from "./pages/Loader";
-
 import "./App.css";
-import MouseFollower from "./Ui/MouseFollower/MouseFollower";
+import MouseFollower from "./components/MouseFollower/MouseFollower";
 import SlidingMenu from "./pages/SlidingMenu";
+import ScrollProgressBar from "./components/ScrollProgressBar/ScrollProgressBar";
 
-// Layout Wrapper
 const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <>
+    <ScrollProgressBar />
     <MusicToggle />
     <SlidingMenu />
     <Header />
@@ -31,13 +30,11 @@ const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => (
 );
 
 function App() {
-  // const isMobile = window.innerWidth <= 768;
 
   return (
     <>
       <div className="app-container bg-black text-gray-300 text-4xl w-full min-h-screen h-full overflow-hidden relative">
         <MouseFollower />
-        {/* {isMobile && <MobileWorkInProgress />} */}
         <MainLayout>
           <Suspense fallback={<div><LoadingPage /></div>}>
             <Routes>

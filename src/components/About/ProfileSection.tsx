@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import React, { useEffect, useRef } from "react";
-import profileImage from "../../assets/Images/cropedProfile2.jpg";
+import profileImage from "../../assets/Images/HelperImgs/cropedProfile2.jpg";
 import hoverEffect from "hover-effect";
-import gProfile from "../../assets/Images/gProfile1.png";
-import overlayImg from "../../assets/Images/overlay.png";
+import gProfile from "../../assets/Images/HelperImgs/gProfile1.png";
+import overlayImg from "../../assets/Images/HelperImgs/overlay.png";
 
 
 const ProfileSection: React.FC = () => {
@@ -34,26 +34,25 @@ const ProfileSection: React.FC = () => {
 
 
     return (
-        <section className="flex flex-col items-center justify-center rounded-3xl md:px-4">
+        <section className="flex justify-center items-center rounded-3xl md:px-4 md:border-0 border-2 border-dashed border-[#2A2B37]">
             <motion.div
-                className="flex flex-col lg:flex-row items-center gap-10 w-full max-w-6xl  border-2 border-dashed border-[#2A2B37] backdrop-blur-xl shadow-[0_20px_50px_rgba(122,90,248,0.2)] py-6 px-4 md:p-10 rounded-[2rem] transition-all duration-500 hover:shadow-[0_25px_60px_rgba(122,90,248,0.3)] overflow-hidden"
+                className="flex justify-center items-center bg-none flex-col lg:flex-row gap-10 w-full backdrop-blur-xl py-6 px-4 md:p-10 rounded-[2rem] transition-all duration-500 overflow-hidden"
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
             >
-                {/* Profile Image with Soft Glow */}
+                
+
                 <motion.div
                     className="relative group w-48 h-48 lg:w-64 lg:h-64 rounded-full overflow-hidden border-2 border-pink-600 cursor-pointer"
                     initial={{ scale: 0.9, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
                     transition={{ delay: 0.3, type: "spring", stiffness: 100 }}
                 >
-                    {/* Only one ref here */}
+
                     <div ref={imageRef} className="w-full h-full rounded-full overflow-hidden" />
                 </motion.div>
 
-
-                {/* Bio Content */}
                 <motion.div
                     className="space-y-6 text-gray-400 max-w-2xl"
                     initial={{ x: 50, opacity: 0 }}

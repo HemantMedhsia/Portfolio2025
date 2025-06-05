@@ -1,25 +1,29 @@
 @keyframes gradientShift {
-    0%, 100% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
+  0%,
+  100% {
+    background-position: 0% 50%;
   }
-  
-  .animated-gradient-text {
-    background: linear-gradient(270deg, #ff6ec4, #7873f5, #00dbde, #fc00ff);
-    background-size: 600% 600%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    animation: gradientShift 5s ease infinite;
+  50% {
+    background-position: 100% 50%;
   }
+}
 
-  .footer-gradient-border {
-    border-top: 1px solid;
-    border-image: linear-gradient(to right, #14b8a6, #8b5cf6, #ec4899); /* teal, violet, pink */
-    border-image-slice: 1;
-  }
-  
-  
+.animated-gradient-text {
+  background: linear-gradient(270deg, #ff6ec4, #7873f5, #00dbde, #fc00ff);
+  background-size: 600% 600%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradientShift 5s ease infinite;
+}
+
+.footer-gradient-border {
+  border-top: 1px solid;
+  border-image: linear-gradient(
+    to right,
+    #14b8a6,
+    #8b5cf6,
+    #ec4899
+  );
+  border-image-slice: 1;
+}

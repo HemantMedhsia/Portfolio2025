@@ -11,9 +11,16 @@ const About: React.FC = () => {
     });
 
     return (
-        <section  className="bg-black text-white">
-            <div className="min-h-screen px-2 py-20 flex flex-col items-center justify-center relative overflow-hidden">
+        <section className="">
+            <div className="min-h-screen w-full py-20 md:px-0 px-3  md:my-20 flex flex-col items-center justify-center relative overflow-hidden ">
                 <IntroHeading scrollYProgress={scrollYProgress} />
+
+                <div className="hidden lg:flex flex-col items-center absolute top-20 right-8">
+                                    <span className="bg-[#1a1443] w-fit text-white rotate-90 p-2 px-5 text-xl rounded-md">
+                                        ABOUT ME
+                                    </span>
+                                    <span className="h-36 w-[2px] bg-[#1a1443]"></span>
+                                </div>
 
                 <motion.h2
                     className="text-5xl w-full max-w-5xl text-center md:text-left md:text-7xl font-bold mb-16 z-10 "
@@ -25,7 +32,7 @@ const About: React.FC = () => {
                 </motion.h2>
 
                 <motion.div
-                    className="flex flex-col items-center justify-center w-full max-w-6xl border-2 border-dashed border-[#2A2B37] backdrop-blur-xl shadow-[0_20px_50px_rgba(122,90,248,0.2)] p-2 md:p-6 rounded-[2rem] transition-all duration-500 hover:shadow-[0_25px_60px_rgba(122,90,248,0.3)] overflow-hidden"
+                    className="w-full md:border-0 border-2 border-dashed border-[#2A2B37] rounded-3xl backdrop-blur-xl p-2 md:p-10 flex flex-col lg:flex-row items-center justify-center gap-10"
                     initial={{ scale: 0.95, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
                     transition={{ duration: 0.8 }}
@@ -33,7 +40,7 @@ const About: React.FC = () => {
                     <ProfileSection />
                 </motion.div>
             </div>
-            
+
         </section>
     );
 };

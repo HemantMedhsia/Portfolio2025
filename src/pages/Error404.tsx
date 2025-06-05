@@ -20,7 +20,6 @@ const Error404 = () => {
       transition={{ duration: 0.5 }}
     >
 
-      {/* Main message */}
       <div className="text-center z-10">
         <h1 className="text-4xl font-bold mb-2">Oops! Page Not Found</h1>
         <p className="text-gray-300 text-sm mb-6">

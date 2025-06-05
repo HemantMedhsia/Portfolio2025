@@ -11,10 +11,10 @@ const IntroHeading: React.FC<IntroHeadingProps> = ({ scrollYProgress }) => {
 
     return (
         <motion.h1
-            className="absolute h-screen flex flex-col justify-center text-center items-center top-0 text-[30vw] text-white/6 font-extrabold tracking-widest z-0 select-none"
+            className="absolute h-screen flex flex-col justify-center text-center items-center top-20 text-[30vw] text-gray-900 font-extrabold tracking-widest z-0 select-none"
             style={{ y }}
         >
-            WHO <span className="text-[20vw]"> AM I?</span>
+            WHO <span className="text-[24vw]"> AM I?</span>
         </motion.h1>
     );
 };

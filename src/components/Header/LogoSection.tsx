@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import hlogo from "../../assets/Images/h-logo.jpg";
+import hlogo from "../../assets/Images/HelperImgs/h-logo.jpg";
 import { useNavigate } from "react-router-dom";
 
 const LogoSection: React.FC = () => {

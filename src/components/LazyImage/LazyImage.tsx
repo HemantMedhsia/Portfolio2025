@@ -1,4 +1,3 @@
-// components/LazyImage.tsx
 import { useState } from "react";
 
 const LazyImage = ({ src, alt, className }: { src: string, alt: string, className?: string }) => {

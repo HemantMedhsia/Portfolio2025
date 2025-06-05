@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import girlWithBulb from "../../assets/Images/girlWithBulb.png"; // Adjust the path as necessary
+import girlWithBulb from "../../assets/Images/HelperImgs/girlWithBulb.png"; // Adjust the path as necessary
 
 const ResumeHeader: React.FC = () => {
     return (
@@ -11,7 +11,7 @@ const ResumeHeader: React.FC = () => {
         >
 
             <motion.img
-                src={girlWithBulb} // Replace with your actual path
+                src={girlWithBulb}
                 alt="Scholar Hat"
                 className="rotate-10 absolute top-5/17 md:top-1/5 right-20 w-40 h-40 md:w-80 md:h-80 opacity-70"
                 animate={{ y: [0, -15, 0] }}
@@ -22,7 +22,6 @@ const ResumeHeader: React.FC = () => {
                 }}
             />
 
-            {/* Main Intro */}
             <motion.h1
                 className=" w-full md:w-2xl md:mx-40 text-left text-4xl md:text-5xl font-extrabold leading-tight "
                 initial={{ opacity: 0 }}
@@ -33,7 +32,6 @@ const ResumeHeader: React.FC = () => {
             </motion.h1>
 
 
-            {/* Short Story */}
             <motion.p
                 className="text-gray-400 text-sm mt-6 max-w-md md:mx-46 text-justify"
                 initial={{ opacity: 0 }}
@@ -43,7 +41,6 @@ const ResumeHeader: React.FC = () => {
                 Want to know what I’ve been up to (professionally 💼, not on weekends 🍕)? My resume’s got all the juicy dev details 💻📜.
             </motion.p>
 
-            {/* Highlight Line */}
             <motion.p
                 className="text-white text-xl font-semibold mt-10 "
                 initial={{ opacity: 0 }}
@@ -52,6 +49,7 @@ const ResumeHeader: React.FC = () => {
             >
                 <span className="animated-gradient-text">Download my resume and let’s build something awesome!</span> 🚀
             </motion.p>
+
         </motion.header>
     )
 }

@@ -8,6 +8,7 @@ const Project: React.FC = () => {
             <ProjectHeader />
             {projectData.map((project, index) => (
                 <ProjectCard
+                    identifier={`project-${index}`}
                     key={index}
                     techStack={project.techStack}
                     projectName={project.projectName}

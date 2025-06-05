@@ -1,4 +1,4 @@
-import universityLogo from "../../assets/Images/image.jpg";
+import universityLogo from "../../assets/Images/HelperImgs/image.jpg";
 
 const educationData = [
     {

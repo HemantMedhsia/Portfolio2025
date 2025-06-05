@@ -7,8 +7,8 @@ interface ExperienceListProps {
     isReversed?: boolean;
 }
 
-const ExperienceList: React.FC<ExperienceListProps> = ({isReversed}) => {
-    const data = isReversed ? reverseExperienceData : experiences ;
+const ExperienceList: React.FC<ExperienceListProps> = ({ isReversed }) => {
+    const data = isReversed ? reverseExperienceData : experiences;
     return (
         <>
             {data.map((exp, index) => {

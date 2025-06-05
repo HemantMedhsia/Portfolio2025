@@ -50,7 +50,6 @@ const ExperienceHeader: React.FC = () => {
                 ↓
             </motion.div>
 
-            {/* Emoji Social Shortcuts */}
             <div className="hidden md:flex justify-end gap-4 text-xl md:text-sm text-gray-500 mb-1">
                 <span className="hover:text-teal-400 cursor-pointer">👨‍💻 GH</span>
                 <span className="hover:text-teal-400 cursor-pointer">✉️ EM</span>

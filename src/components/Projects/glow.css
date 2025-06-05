@@ -1,0 +1,107 @@
+.glow-container {
+  --spread: 60;
+}
+
+.glow-card {
+  --active: 0.2;
+  --start: 0;
+}
+
+.glow-card:is(:hover, :focus-visible) {
+  z-index: 2;
+}
+
+.glows {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  filter: blur(32px);
+}
+
+.glow-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  background: conic-gradient(
+    from 180deg at 50% 70%,
+    #f626af 0deg,
+    #8228ec 72.0000010728836deg,
+    #f626af 144.0000021457672deg,
+    #0025ba 216.00000858306885deg,
+    #f626af 288.0000042915344deg,
+    #fafafa 1turn
+  );
+  mask-image: radial-gradient(circle at center, white 2px, transparent 3px);
+  -webkit-mask-image: radial-gradient(
+    circle at center,
+    white 2px,
+    transparent 3px
+  );
+  opacity: var(--active, 0);
+  transition: opacity 0.5s ease;
+  filter: drop-shadow(0 0 6px rgba(0, 174, 255, 0.4));
+}
+
+.glow-card::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  border-radius: 40px;
+  pointer-events: none;
+  background: #1a1a1a;
+  background-attachment: fixed;
+  mask: linear-gradient(#0000, #0000),
+    conic-gradient(
+      from
+        calc(
+          ((var(--start) + (var(--spread) * 0.25)) - (var(--spread) * 1.5)) *
+            1deg
+        ),
+      #ffffff26 0deg,
+      #c0aaff,
+      #ffffff26 calc(var(--spread) * 2.5deg)
+    );
+  mask-clip: padding-box, border-box;
+  mask-composite: intersect;
+  opacity: var(--active);
+  transition: opacity 1s;
+}
+
+.glow-card::after {
+  --bg-size: 100%;
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  background: conic-gradient(
+    from 180deg at 50% 70%,
+    #f626af 0deg,
+    #8228ec 72.0000010728836deg,
+    #f626af 144.0000021457672deg,
+    #0025ba 216.00000858306885deg,
+    #f626af 288.0000042915344deg,
+    #fafafa 1turn
+  );
+  background-attachment: fixed;
+  border-radius: 40px;
+  opacity: var(--active, 0);
+  transition: opacity 1s;
+  inset: 0;
+  border: 4px solid transparent;
+  mask: linear-gradient(#0000, #0000),
+    conic-gradient(
+      from
+        calc(
+          ((var(--start) + (var(--spread) * 0.25)) - (var(--spread) * 0.5)) *
+            1deg
+        ),
+      #0000 0deg,
+      #ffffff,
+      #0000 calc(var(--spread) * 1deg)
+    );
+  filter: brightness(1.2) contrast(1.2);
+  mask-clip: padding-box, border-box;
+  mask-composite: intersect;
+}

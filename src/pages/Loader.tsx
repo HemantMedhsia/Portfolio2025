@@ -1,5 +1,5 @@
 import React from "react";
-import Loader from "../Ui/Loader/Loader";
+import Loader from "../components/Loader/Loader";
 
 const LoadingPage: React.FC = () => {
     return (

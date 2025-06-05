@@ -9,7 +9,6 @@ const TechStackMarqueeHeader: React.FC = () => {
             transition={{ duration: 1 }}
         >
 
-            {/* Main Intro */}
             <motion.h1
                 className="w-full md:w-2xl md:mx-40 lg:mx-40 text-left text-4xl md:text-5xl font-extrabold leading-tight bg-gradient-to-r from-teal-200 via-purple-200 to-pink-400 bg-clip-text text-transparent"
                 initial={{ opacity: 0 }}
@@ -20,7 +19,6 @@ const TechStackMarqueeHeader: React.FC = () => {
             </motion.h1>
 
 
-            {/* Short Story */}
             <motion.p
                 className="text-gray-400 text-sm mt-6 max-w-md md:mx-46 text-justify"
                 initial={{ opacity: 0 }}

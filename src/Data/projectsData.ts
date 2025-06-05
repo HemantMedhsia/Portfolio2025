@@ -1,15 +1,15 @@
-import overlayImg from "../assets/Images/overlay.png";
-import schoolCrmMainImg from "../assets/Images/SchoolCRMMain.jfif";
+import overlayImg from "../assets/Images/HelperImgs/overlay.png";
+import schoolCrmMainImg from "../assets/Images/HelperImgs/SchoolCRMMain.jfif";
 import schoolCrmSecImg from "../assets/Images/Projects/schoolCrmMainImg.png";
 import mainImgPortfolio from "../assets/Images/Projects/PortfolioMainImg.png";
 import secImgPortfolio from "../assets/Images/Projects/image.png";
 import empMainImg from "../assets/Images/Projects/EmpMainImg.png";
 import AradhyaTechMainImg from "../assets/Images/Projects/AradhyaTechMainImg.png";
 import AradhyaTechSecImg from "../assets/Images/Projects/AradhyaTechSecImg.png";
-import Img01 from "../assets/Images/01.svg";
-import Img02 from "../assets/Images/02.svg";
-import Img03 from "../assets/Images/03.svg";
-import Img04 from "../assets/Images/04.svg";
+import Img01 from "../assets/Images/Numbers/01.svg";
+import Img02 from "../assets/Images/Numbers/02.svg";
+import Img03 from "../assets/Images/Numbers/03.svg";
+import Img04 from "../assets/Images/Numbers/04.svg";
 
 const projectData = [
   {

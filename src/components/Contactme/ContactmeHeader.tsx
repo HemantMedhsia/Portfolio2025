@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import schollarHat from "../../assets/Images/envelop.png";
+import schollarHat from "../../assets/Images/HelperImgs/envelop.png";
 
 const ContactMeHeader: React.FC = () => {
     return (
@@ -11,18 +11,6 @@ const ContactMeHeader: React.FC = () => {
             transition={{ duration: 1 }}
         >
 
-            {/* 🎓 Animated Scholar Hat (Floating PNG) */}
-            {/* <motion.img
-                src={schollarKid} // Replace with your actual path
-                alt="Scholar Hat"
-                className="rotate-10 absolute top-[30px] left-20 w-16 h-16 md:w-80 md:h-80"
-                animate={{ y: [0, -15, 0] }}
-                transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    ease: "easeInOut"
-                }}
-            /> */}
             <motion.img
                 src={schollarHat} // Replace with your actual path
                 alt="Scholar Hat"
@@ -53,7 +41,7 @@ const ContactMeHeader: React.FC = () => {
                 transition={{ delay: 0.6, duration: 1 }}
             >
                 Got questions or ideas? Send a message and find out what exciting answers and connections are waiting for you. 📚 ✨
-                
+
             </motion.p>
 
             {/* Down Arrow */}

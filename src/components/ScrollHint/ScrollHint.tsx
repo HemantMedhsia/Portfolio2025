@@ -6,7 +6,6 @@ const ScrollHint: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Hide when scrolled more than 50px
       if (window.scrollY > 50) {
         setIsVisible(false);
       } else {

@@ -1,4 +1,3 @@
-// 📁 src/components/MusicToggle.tsx
 import { useMusic } from "../../context/MusicContext";
 import { FaPlay, FaPause } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
@@ -23,7 +22,7 @@ const MusicToggle = () => {
           exit={{ opacity: 0, scale: 0 }}
           transition={{ duration: 0.3 }}
         >
-          {isPlaying ? <FaPause size={18} color="black" /> : <FaPlay size={18} color="black"/>}
+          {isPlaying ? <FaPause size={18} color="black" /> : <FaPlay size={18} color="black" />}
         </motion.div>
       </AnimatePresence>
     </motion.button>

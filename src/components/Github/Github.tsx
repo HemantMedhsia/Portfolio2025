@@ -9,8 +9,8 @@ const Github: React.FC = () => {
     };
 
     const explicitTheme: ThemeInput = {
-        light: ['#fef3c7', '#fbcfe8', '#f9a8d4', '#d946ef', '#a855f7'],  // warm pastel glow
-        dark: ['#1f1f1f', '#4c1d95', '#9333ea', '#e879f9', '#facc15'],  // rich purples, yellows & pinks
+        light: ['#fef3c7', '#fbcfe8', '#f9a8d4', '#d946ef', '#a855f7'],
+        dark: ['#1f1f1f', '#4c1d95', '#9333ea', '#e879f9', '#facc15'],
     };
 
 
@@ -41,8 +41,8 @@ const Github: React.FC = () => {
 
                 <motion.div
                     className="bg-[#15161C] backdrop-blur-md shadow-xl md:rounded-2xl p-4 sm:p-6 md:p-12 mt-12
-             transition-transform hover:scale-[1.02] border-t-2 border-b-2 md:border-2 
-             border-dashed border-[#2A2B37] w-full"
+                    transition-transform hover:scale-[1.02] border-t-2 border-b-2 md:border-2 
+                    border-dashed border-[#2A2B37] w-full"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.9, duration: 1 }}
@@ -59,9 +59,6 @@ const Github: React.FC = () => {
                         />
                     </div>
                 </motion.div>
-
-
-
             </div>
         </section>
     );

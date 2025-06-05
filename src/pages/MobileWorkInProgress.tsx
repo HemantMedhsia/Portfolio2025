@@ -37,7 +37,6 @@ const MobileWorkInProgress = () => {
             />
           </div>
 
-          {/* Main message card */}
           <motion.div
             className="bg-white/10 backdrop-blur-xs border border-white/20 rounded-3xl p-8 max-w-sm text-center text-white shadow-2xl"
             initial={{ scale: 0.8, opacity: 0 }}

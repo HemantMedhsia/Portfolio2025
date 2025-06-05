@@ -22,7 +22,7 @@ const MouseFollower = () => {
         const move = (e: MouseEvent) => {
             mouseX.set(e.clientX - divSize);
             mouseY.set(e.clientY - divSize);
-            setDivSize(isHoveringButton ? 46 : 10);
+            setDivSize(isHoveringButton ? 56 : 10);
         };
 
         const checkHover = (e: MouseEvent) => {

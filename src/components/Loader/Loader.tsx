@@ -20,7 +20,7 @@ const Loader: React.FC = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % words.length);
-        }, 1300); // every 2 seconds
+        }, 1300);
         return () => clearInterval(interval);
     }, []);
 
@@ -43,8 +43,6 @@ const Loader: React.FC = () => {
                             </div>
                         ))}
                     </motion.div>
-
-                    {/* Optional: Gradient Overlay */}
                     <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-b from-black via-transparent to-black" />
                 </div>
             </div>
