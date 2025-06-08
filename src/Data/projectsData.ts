@@ -28,7 +28,7 @@ const projectData = [
     mainImg: schoolCrmMainImg,
     secImg: schoolCrmSecImg,
     overlayImg: overlayImg,
-    githubLink: "",
+    githubLink: "https://github.com/HemantMedhsia/crm.misterhemant.tech",
     liveLink: "https://crm.misterhemant.tech",
     svgNumberImg: Img02,
   },
