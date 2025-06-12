@@ -54,7 +54,7 @@ function generateSeatingData(): Section[] {
             seats: []
         };
 
-        for (let i = 1; i <= 32; i++) {
+        for (let i = 1; i <= 24; i++) {
             const seatType = seatTypes[Math.floor(Math.random() * seatTypes.length)];
             const seatStatus = seatStatuses[Math.floor(Math.random() * seatStatuses.length)];
             const seatId = `${section.sectionName}-${i}`;
