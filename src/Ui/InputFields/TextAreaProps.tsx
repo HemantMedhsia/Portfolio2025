@@ -1,24 +1,29 @@
-import React from "react";
+import { UseFormRegister, FieldValues, Path, RegisterOptions } from "react-hook-form";
 
-interface TextAreaProps {
+interface TextAreaProps<T extends FieldValues> {
   id: string;
-  name: string;
+  name: Path<T>;
   label: string;
   placeholder?: string;
+  register: UseFormRegister<T>;
+  required?: boolean;
+  validation?: RegisterOptions<T, Path<T>>;
 }
 
-const TextArea: React.FC<TextAreaProps> = ({
+function TextArea<T extends FieldValues>({
   id,
   name,
   label,
   placeholder = "",
-}) => {
+  register,
+  validation = {},
+}: TextAreaProps<T>) {
   return (
     <div className="relative">
       <textarea
         id={id}
-        name={name}
         placeholder={placeholder}
+        {...register(name, validation)}
         className="peer h-32 w-full resize-none rounded-2xl border border-[#2A2B37] bg-[#15161C] bg-opacity-40 py-1 px-3 text-base leading-6 text-gray-300 placeholder-transparent outline-none transition-colors duration-200 ease-in-out focus:border-indigo-400 focus:bg-black focus:ring-1 focus:ring-indigo-500 backdrop-blur-3xl"
       />
       <label
@@ -29,6 +34,6 @@ const TextArea: React.FC<TextAreaProps> = ({
       </label>
     </div>
   );
-};
+}
 
 export default TextArea;
