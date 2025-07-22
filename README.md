@@ -134,7 +134,7 @@ To install and run the application, follow these steps:
 
 ### Prerequisites
 
-* Node.js (version  or higher)
+* [Node.js](https://nodejs.org/) (v16 or higher recommended)
 * npm or yarn
 
 ### Installation
@@ -153,42 +153,21 @@ The application should now be running and accessible in your web browser.
 ## Code Block for Installation and Running
 
 `````bash
-# Clone the repository
+# 1️⃣ Clone the repository
 git clone https://github.com/HemantMedhsia/Portfolio.git
 
-# Navigate to the repository directory
+# 2️⃣ Navigate to the directory
 cd Portfolio
 
-# Install the dependencies
-npm install
+# 3️⃣ Install the dependencies
+npm install    # or yarn install
 
-# Start the development server
-npm run dev
+# 4️⃣ Run the app
+npm run dev    # or yarn dev
 
-# Open a web browser and navigate to http://localhost:
+# 🔗 Open in browser
+# http://localhost:5173
+
 `````
 
-
----
-
-## 🧩 Getting Started
-
-### 📦 Prerequisites
-
-- [Node.js](https://nodejs.org/) (v16 or higher recommended)
-- npm or yarn
-
-### ⚙️ Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/HemantMedhsia/Portfolio.git
-
-# Navigate to the directory
-cd Portfolio
-
-# Install dependencies
-npm install
-# or
-yarn install
 
