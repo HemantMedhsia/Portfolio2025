@@ -34,7 +34,8 @@ Welcome to my **personal developer portfolio** built using **React**, **TypeScri
 
 ## 📁 Project Structure Overview
 
-📁 Portfolio/
+<pre>
+  📁 Portfolio/
 ├── 📄 .gitignore
 ├── 📄 README.md
 ├── 📄 index.html
@@ -101,6 +102,7 @@ Welcome to my **personal developer portfolio** built using **React**, **TypeScri
 ├── 📄 vite.config.ts
 ├── 📄 eslint.config.js
 ├── 📄 vercel.json
+</pre>
 
 
 ## High-Level Summary
