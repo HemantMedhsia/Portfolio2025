@@ -167,3 +167,28 @@ npm run dev
 
 # Open a web browser and navigate to http://localhost:
 `````
+
+
+---
+
+## 🧩 Getting Started
+
+### 📦 Prerequisites
+
+- [Node.js](https://nodejs.org/) (v16 or higher recommended)
+- npm or yarn
+
+### ⚙️ Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/HemantMedhsia/Portfolio.git
+
+# Navigate to the directory
+cd Portfolio
+
+# Install dependencies
+npm install
+# or
+yarn install
+
