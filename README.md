@@ -139,7 +139,7 @@ To install and run the application, follow these steps:
 
 ### Installation
 
-. Clone the repository using Git: `git clone [https://github.com/HemantMedhsia/Portfolio.git](https://github.com/HemantMedhsia/Portfolio2025.git)`
+. Clone the repository using Git: `git clone https://github.com/HemantMedhsia/Portfolio2025.git`
 . Navigate to the repository directory: `cd Portfolio`
 . Install the dependencies using npm or yarn: `npm install` or `yarn install`
 
