@@ -170,4 +170,18 @@ npm run dev    # or yarn dev
 
 `````
 
+## 📩 Contact & Support
+
+If you have any questions, feedback, or need support, feel free to reach out:
+
+- 📧 Email: [hemantmedhsia@gmail.com](mailto:hemantmedhsia@gmail.com)
+- 🐞 Bug Reports: [Create an issue](https://github.com/HemantMedhsia/Portfolio2025/issues)
+- ⭐ Suggestions & Features: [Start a discussion](https://github.com/HemantMedhsia/Portfolio2025/discussions)
+- 🤝 Want to Contribute? [Fork the repo](https://github.com/HemantMedhsia/Portfolio2025/fork) and submit a PR!
+
+---
+
+> Your support matters! If you liked this project, don’t forget to ⭐ star the repository and share it with others.
+
+
 
