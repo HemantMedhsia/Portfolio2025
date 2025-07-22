@@ -33,7 +33,123 @@ Welcome to my **personal developer portfolio** built using **React**, **TypeScri
 ---
 
 ## 📁 Project Structure Overview
-<pre><code>```bash 📦 Portfolio2025/ ├── 📄 .gitignore ├── 📄 README.md ├── 📄 eslint.config.js ├── 📄 index.html ├── 📄 package.json ├── 📄 package-lock.json ├── 📄 tsconfig.json ├── 📄 tsconfig.app.json ├── 📄 tsconfig.node.json ├── 📄 vite.config.ts ├── 📄 vercel.json ├── 📁 public/ │ ├── 📄 HemantMedhsiaUpdatedResume.pdf │ ├── 🖼️ gProfile1.png │ ├── 🖼️ og-image.png │ └── 🖼️ vite.svg ├── 📁 src/ │ ├── 📄 App.css │ ├── 📄 App.tsx │ ├── 📁 Data/ │ │ └── 📄 projectsData.ts │ ├── 📁 Layout/ │ │ ├── 📄 Footer.tsx │ │ └── 📄 Header.tsx │ ├── 📁 Routes/ │ │ └── 📄 RoutesConfig.tsx │ ├── 📁 Ui/ │ │ ├── 📁 GradientLine/ │ │ │ └── 📄 GradientLine.tsx │ │ └── 📁 InputFields/ │ │ ├── 📄 TextAreaProps.tsx │ │ └── 📄 TextInputProps.tsx │ ├── 📁 apis/ │ │ └── 📁 Contactme/ │ │ └── 📄 Contactme.ts │ ├── 📁 assets/ │ │ ├── 📁 Images/ │ │ │ ├── 📁 Company/ (aradhyatechLogo.jfif, growQuestLogo.jfif, etc.) │ │ │ ├── 📁 Education/ (degree.png, fullSchollar.png, etc.) │ │ │ ├── 📁 HelperImgs/ (cropedProfile.png, SchoolCRMMain.jfif, etc.) │ │ │ ├── 📁 Numbers/ (01.svg, 02.svg, etc.) │ │ │ ├── 📁 Projects/ (PortfolioMainImg.png, EmpMainImg.png, etc.) │ │ │ └── 📁 stack/ (React.png, Tailwind.png, NodeJs.svg, etc.) │ │ ├── 📁 Sounds/ │ │ │ └── 🔊 epic.mp3 │ │ └── 📄 react.svg │ ├── 📁 components/ │ │ ├── 📁 About/ │ │ │ ├── 📄 IntroHeading.tsx │ │ │ └── 📄 ProfileSection.tsx │ │ ├── 📁 Contactme/ │ │ │ └── 📄 ContactmeHeader.tsx │ │ ├── 📁 Education/ │ │ │ ├── 📄 EducationBody.tsx, EducationCard.tsx, etc. │ │ ├── 📁 Experience/ │ │ │ ├── 📄 ExperienceBody.tsx, TimelineCard.tsx, etc. │ │ ├── 📁 Github/ │ │ │ └── 📄 Github.tsx │ │ ├── 📁 Header/ │ │ │ ├── 📄 BottomLeftRotatedButtons.tsx, etc. │ │ ├── 📁 LazyImage/ │ │ │ ├── 📄 LazyImage.tsx, LazyMotionImage.tsx │ │ ├── 📁 Loader/ │ │ │ ├── 📄 Loader.module.scss, Loader.tsx │ │ ├── 📁 Marquee/ │ │ ├── 📁 MouseFollower/ │ │ ├── 📁 Music/ │ │ ├── 📁 Popups/ │ │ ├── 📁 Projects/ │ │ ├── 📁 Resume/ │ │ ├── 📁 ScrollHint/ │ │ ├── 📁 ScrollProgressBar/ │ │ ├── 📁 ScrollToTop/ │ │ ├── 📁 SmoothScrolling/ │ │ ├── 📁 TechStacksMarquee/ │ │ └── 📁 Testimonials/ │ ├── 📁 context/ │ │ └── 📄 MusicContext.tsx │ ├── 📁 pages/ │ │ ├── 📄 About.tsx, Home.tsx, Experience.tsx, etc. │ ├── 📁 types/ │ │ └── 📄 hover-effect.d.ts │ ├── 📄 index.css │ └── 📄 main.tsx ```</code></pre>
+graph TD
+
+  A[Portfolio2025]
+
+  subgraph 🗂️ Root
+    A1[.gitignore]
+    A2[README.md]
+    A3[eslint.config.js]
+    A4[index.html]
+    A5[package.json]
+    A6[tsconfig.json]
+    A7[vite.config.ts]
+    A8[vercel.json]
+  end
+
+  A --> B[public]
+  subgraph 📂 public
+    B1[HemantMedhsiaUpdatedResume.pdf]
+    B2[gProfile1.png]
+    B3[og-image.png]
+    B4[vite.svg]
+  end
+
+  A --> C[src]
+  subgraph 📂 src
+    C1[App.tsx]
+    C2[App.css]
+    C3[index.css]
+    C4[main.tsx]
+  end
+
+  C --> D[Data]
+  subgraph 🗃️ Data
+    D1[projectsData.ts]
+  end
+
+  C --> E[Layout]
+  subgraph 🎯 Layout
+    E1[Header.tsx]
+    E2[Footer.tsx]
+  end
+
+  C --> F[Routes]
+  subgraph 🚦 Routes
+    F1[RoutesConfig.tsx]
+  end
+
+  C --> G[Ui]
+  subgraph 🎨 Ui
+    G1[GradientLine/]
+    G2[InputFields/]
+  end
+
+  C --> H[apis]
+  subgraph 🔌 apis
+    H1[Contactme.ts]
+  end
+
+  C --> I[assets]
+  subgraph 🖼️ assets
+    I1[Images]
+    subgraph 📷 Images
+      I1a[Company/]
+      I1b[Education/]
+      I1c[HelperImgs/]
+      I1d[Numbers/]
+      I1e[Projects/]
+      I1f[stack/]
+    end
+    I2[Sounds]
+    subgraph 🔊 Sounds
+      I2a[epic.mp3]
+    end
+  end
+
+  C --> J[components]
+  subgraph 🧩 components
+    J1[About/]
+    J2[Contactme/]
+    J3[Education/]
+    J4[Experience/]
+    J5[Github/]
+    J6[Header/]
+    J7[LazyImage/]
+    J8[Loader/]
+    J9[Marquee/]
+    J10[MouseFollower/]
+    J11[Music/]
+    J12[Popups/]
+    J13[Projects/]
+    J14[Resume/]
+    J15[ScrollHint/]
+    J16[ScrollProgressBar/]
+    J17[ScrollToTop/]
+    J18[SmoothScrolling/]
+    J19[TechStacksMarquee/]
+    J20[Testimonials/]
+  end
+
+  C --> K[context]
+  subgraph 🧠 context
+    K1[MusicContext.tsx]
+  end
+
+  C --> L[pages]
+  subgraph 📄 pages
+    L1[Home.tsx]
+    L2[About.tsx]
+    L3[Experience.tsx]
+    L4[Contact.tsx]
+    L5[Projects.tsx]
+  end
+
+  C --> M[types]
+  subgraph 🔠 types
+    M1[hover-effect.d.ts]
+  end
 
 ## High-Level Summary
 
