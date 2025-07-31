@@ -45,7 +45,7 @@ const MouseFollower = () => {
 
     return (
         <motion.div
-            className={`fixed top-0 left-0 pointer-events-none z-[9999] flex items-center justify-center
+            className={`hidden fixed top-0 left-0 pointer-events-none z-[9999] md:flex items-center justify-center
         transition-all duration-200 ease-out`}
             style={{
                 x: springX,
