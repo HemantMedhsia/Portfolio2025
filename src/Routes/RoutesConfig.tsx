@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import LoadingPage from "../pages/Loader";
 import "../App.css";
+import NewMusicToggle from "../components/Music/NewMusicToggle";
 
 // Lazy Load Pages
 const Home = lazy(() => import("../pages/Home"));
@@ -40,6 +41,7 @@ const routes = [
                 <Github />
                 <TestimonialMarqueeHeader />
                 <TestimonialMarquee />
+                <NewMusicToggle />
             </>
         ),
     },

@@ -1,8 +1,6 @@
 import { motion } from "motion/react";
 import LogoSection from "../components/Header/LogoSection";
 import SocialIcons from "../components/Header/SocialIcons";
-import TopRightRotatedButtons from "../components/Header/TopRightRotatedButtons";
-import BottomLeftRotatedButtons from "../components/Header/BottomLeftRotatedButtons";
 
 
 const Header: React.FC = () => {
@@ -16,9 +14,6 @@ const Header: React.FC = () => {
                 <SocialIcons />
 
             </motion.div>
-
-            <TopRightRotatedButtons />
-            <BottomLeftRotatedButtons />
 
         </motion.div>
     );

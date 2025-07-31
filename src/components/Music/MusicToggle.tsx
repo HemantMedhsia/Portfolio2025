@@ -8,7 +8,7 @@ const MusicToggle = () => {
   return (
     <motion.button
       onClick={toggleMusic}
-      className="fixed bottom-6 right-6 z-50 bg-gradient-to-tr from-pink-500 to-indigo-400 text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-all border-4 border-gray-400 overflow-hidden opacity-80 backdrop-blur-3xl cursor-pointer"
+      className="fixed bottom-6 right-26 z-50 bg-gradient-to-tr from-pink-500 to-indigo-400 text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-all border-4 border-gray-400 overflow-hidden opacity-80 cursor-pointer"
       initial={{ scale: 0 }}
       animate={{ scale: 1 }}
       whileTap={{ scale: 0.8, rotate: 360 }}

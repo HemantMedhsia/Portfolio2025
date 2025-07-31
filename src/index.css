@@ -1,5 +1,27 @@
 @import "tailwindcss";
 
+@theme {
+  --animate-rect1Anim: rect1Anim 1s ease-in-out infinite alternate;
+  --animate-rect2Anim: rect2Anim .5s ease-in-out infinite alternate;
+  --animate-rect3Anim: rect3Anim .2s ease-in-out infinite alternate;
+}
+
+@keyframes rect1Anim {
+  100% { height: 10px; }
+  0% { height: 2px; }
+}
+
+@keyframes rect2Anim {
+  0% { height: 2px; }
+  100% { height: 10px; }
+}
+
+@keyframes rect3Anim {
+  0% { height: 7px; }
+  100% { height: 3px; }
+}
+
+
 /* Apply Work Sans to the entire body */
 body {
   font-family: "Work Sans", sans-serif;

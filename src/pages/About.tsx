@@ -32,7 +32,7 @@ const About: React.FC = () => {
                 </motion.h2>
 
                 <motion.div
-                    className="w-full md:border-0 border-2 border-dashed border-[#2A2B37] rounded-3xl backdrop-blur-xl p-2 md:p-10 flex flex-col lg:flex-row items-center justify-center gap-10"
+                    className="w-full md:border-0 border-2 border-dashed border-[#2A2B37] rounded-3xl backdrop-blur-xl p-2 md:p-10 flex flex-col lg:flex-row items-center justify-center gap-10 bg-black/10"
                     initial={{ scale: 0.95, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
                     transition={{ duration: 0.8 }}

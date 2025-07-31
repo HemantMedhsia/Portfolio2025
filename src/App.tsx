@@ -6,8 +6,6 @@ import Header from "./Layout/Header";
 import Footer from "./Layout/Footer";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import SmoothScroll from "./components/SmoothScrolling/SmoothScroll";
-import MusicToggle from "./components/Music/MusicToggle";
-
 import routes from "./Routes/RoutesConfig";
 import LoadingPage from "./pages/Loader";
 import "./App.css";
@@ -18,7 +16,6 @@ import ScrollProgressBar from "./components/ScrollProgressBar/ScrollProgressBar"
 const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <>
     <ScrollProgressBar />
-    <MusicToggle />
     <SlidingMenu />
     <Header />
     <ScrollToTop />
@@ -30,13 +27,18 @@ const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => (
 );
 
 function App() {
-
   return (
     <>
       <div className="app-container bg-black text-gray-300 text-4xl w-full min-h-screen h-full overflow-hidden relative">
         <MouseFollower />
         <MainLayout>
-          <Suspense fallback={<div><LoadingPage /></div>}>
+          <Suspense
+            fallback={
+              <div>
+                <LoadingPage />
+              </div>
+            }
+          >
             <Routes>
               {routes.map((route, index) => (
                 <Route key={index} path={route.path} element={route.element} />
@@ -48,6 +50,5 @@ function App() {
     </>
   );
 }
-
 
 export default App;

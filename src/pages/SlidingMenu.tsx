@@ -19,7 +19,7 @@ const menuVariants = {
     x: '100%',
     transition: {
       type: 'tween',
-      duration: 0.2,
+      duration: 0.3,
       when: 'afterChildren',
       staggerChildren: 0.08,
       staggerDirection: -1,
@@ -28,9 +28,17 @@ const menuVariants = {
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, x: 30 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.3 } },
-  exit: { opacity: 0, x: 30, transition: { duration: 0.1 } },
+  hidden: { opacity: 0, x: 40 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.3, ease: 'easeOut' },
+  },
+  exit: {
+    opacity: 0,
+    x: 40,
+    transition: { duration: 0.15, ease: 'easeIn' },
+  },
 };
 
 const SlidingMenu = () => {
@@ -47,24 +55,24 @@ const SlidingMenu = () => {
       {isOpen && (
         <motion.div
           key="slide-menu"
-          className="sm:hidden border-l-2 border-dashed border-[#393a44] fixed top-0 right-0 h-full w-[75vw] z-50 p-4 bg-black/50 backdrop-blur-xl text-white flex flex-col justify-between shadow-2xl rounded-l-3xl"
+          className="fixed top-0 right-0 h-full w-[85vw] sm:w-[70vw] md:w-[50vw] lg:w-[35vw] z-50 p-6 bg-white/5 backdrop-blur-xl border-l-2 border-[#2A2B37] text-white shadow-[0_8px_32px_rgba(0,0,0,1)] rounded-l-3xl flex flex-col justify-between "
           variants={menuVariants}
           initial="hidden"
           animate="visible"
           exit="exit"
         >
-          {/* Close button */}
+          {/* Close Button */}
           <motion.button
             onClick={closeMenu}
-            className="text-white text-3xl self-end p-1 hover:text-teal-400 transition"
+            className="text-white text-4xl self-end hover:text-red-400 hover:rotate-90 transition-transform duration-300"
             variants={itemVariants}
             aria-label="Close menu"
           >
             ✕
           </motion.button>
 
-          {/* Menu items */}
-          <div className="flex flex-col mt-6 space-y-6 text-2xl">
+          {/* Menu Items */}
+          <div className="flex flex-col mt-12 space-y-6 text-2xl md:text-3xl font-semibold">
             {[
               { label: 'Home', path: '/' },
               { label: 'Experience', path: '/experience' },
@@ -72,45 +80,45 @@ const SlidingMenu = () => {
               { label: 'View Resume', path: '/resume' },
               { label: 'Contact Me', path: '/contactme' },
             ].map((item, index) => (
-              <motion.div
+              <motion.button
                 key={index}
                 onClick={() => handleNavigate(item.path)}
-                className="cursor-pointer py-2 pl-2 rounded-xl hover:bg-teal-500/10 transition-all active:bg-gray-500/30 active:scale-110"
+                className="px-4 py-3 font-thin rounded-3xl border border-[#2A2B37] bg-black/30 hover:bg-gradient-to-r from-teal-500/30 to-purple-500/30 active:scale-105 transition-all duration-400 shadow-inner hover:shadow-lg hover:text-white text-gray-400"
                 variants={itemVariants}
               >
                 {item.label}
-              </motion.div>
+              </motion.button>
             ))}
           </div>
 
-          {/* Social icons */}
+          {/* Social Icons */}
           <motion.div
-            className="flex justify-center items-center space-x-8 mt-8 mb-2 text-gray-300 footer-gradient-border pt-4"
+            className="flex justify-center items-center space-x-8 mt-12 text-gray-300"
             variants={itemVariants}
           >
             <a
               href="https://github.com/hemantmedhsia"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-white transition-transform hover:scale-110 active:scale-125 active:text-teal-300"
+              className="hover:text-white hover:scale-125 transition-transform duration-200"
             >
-              <ImGithub size={22} />
+              <ImGithub size={24} />
             </a>
             <a
               href="https://www.linkedin.com/in/hemantmedhsia/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-white transition-transform hover:scale-110 active:scale-125 active:text-teal-300"
+              className="hover:text-white hover:scale-125 transition-transform duration-200"
             >
-              <ImLinkedin2 size={22} />
+              <ImLinkedin2 size={24} />
             </a>
             <a
               href="https://www.instagram.com/hemant_____g/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-white transition-transform hover:scale-110 active:scale-125 active:text-teal-300"
+              className="hover:text-white hover:scale-125 transition-transform duration-200"
             >
-              <IoLogoInstagram size={22} />
+              <IoLogoInstagram size={24} />
             </a>
           </motion.div>
         </motion.div>

@@ -34,9 +34,9 @@ const ProfileSection: React.FC = () => {
 
 
     return (
-        <section className="flex justify-center items-center rounded-3xl md:px-4 md:border-0 border-2 border-dashed border-[#2A2B37]">
+        <section className="flex justify-center items-center rounded-3xl md:px-4 md:border-0 border-2 border-dashed border-[#2A2B37] bg-transparent">
             <motion.div
-                className="flex justify-center items-center bg-none flex-col lg:flex-row gap-10 w-full backdrop-blur-xl py-6 px-4 md:p-10 rounded-[2rem] transition-all duration-500 overflow-hidden"
+                className="flex justify-center items-center bg-none flex-col lg:flex-row gap-10 w-full backdrop-blur-xl py-6 px-4 md:p-10 rounded-[2rem] transition-all duration-500 overflow-hidden bg-black"
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
@@ -44,7 +44,7 @@ const ProfileSection: React.FC = () => {
                 
 
                 <motion.div
-                    className="relative group w-48 h-48 lg:w-64 lg:h-64 rounded-full overflow-hidden border-2 border-pink-600 cursor-pointer"
+                    className="relative group w-48 h-48 lg:w-64 lg:h-64 rounded-full overflow-hidden border-2 border-teal-600 border-dashed cursor-pointer p-1"
                     initial={{ scale: 0.9, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
                     transition={{ delay: 0.3, type: "spring", stiffness: 100 }}
